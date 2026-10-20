@@ -1,0 +1,30 @@
+name: PQC Hybrid KMS CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: Build, Test & Race Detection
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.22'
+          check-latest: true
+
+      - name: Verify Module Dependencies
+        run: go mod verify
+
+      - name: Execute Unit & Integration Tests with Race Detector
+        run: go test -v -race ./...
+
+      - name: Build Server Binary
+        run: CGO_ENABLED=0 go build -v -o pqc-kms-server ./cmd/server

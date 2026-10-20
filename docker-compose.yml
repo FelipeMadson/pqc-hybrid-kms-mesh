@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  pqc-kms-node:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rnp-pqc-kms-daemon
+    ports:
+      - "8085:8085"
+    environment:
+      - PORT=8085
+      - DOMAIN=pop-df.rnp.br
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:8085/healthz"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
