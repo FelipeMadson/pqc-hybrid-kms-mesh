@@ -8,6 +8,9 @@
 
 > **Reference Prototype engineered for RNP DPDI Chamada PCI 2026 — Projeto 2: *Arquitetura Multidomínio para Redes Quanticamente Seguras*.**
 
+## 📄 Academic Research Paper
+- 📑 **Scientific Paper (SBC/RNP Standard)**: [Read the full research paper on Hybrid PQC-QKD (PT-BR)](docs/paper/README.md)
+
 ---
 
 ## 1. Overview

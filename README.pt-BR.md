@@ -8,6 +8,9 @@
 
 > **Protótipo de Referência desenvolvido para a Chamada PCI/CNPq da RNP 2026 — Projeto 2: *Arquitetura Multidomínio para Redes Quanticamente Seguras*.**
 
+## 📄 Artigo Científico
+- 📑 **Artigo Científico Completo (Normas SBC/RNP)**: [Ler artigo de pesquisa completo sobre PQC-QKD Híbrido](docs/paper/README.md)
+
 ---
 
 ## 1. Visão Geral
